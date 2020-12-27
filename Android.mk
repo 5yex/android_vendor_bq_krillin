@@ -3,24 +3,16 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter krillin, $(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libdpframework
-LOCAL_SRC_FILES := lib/libdpframework.so
+LOCAL_MODULE := mtk-ril
+LOCAL_SRC_FILES := lib/mtk-ril.so
 LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libcam1client
-LOCAL_SRC_FILES := lib/libcam1client.so
-LOCAL_PROPRIETARY_MODULE = true
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libcam_utils
-LOCAL_SRC_FILES := lib/libcam_utils.so
+LOCAL_MODULE := librilmtk
+LOCAL_SRC_FILES := lib/librilmtk.so
 LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
@@ -35,24 +27,8 @@ LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libgralloc_extra
-LOCAL_SRC_FILES := lib/libgralloc_extra.so
-LOCAL_PROPRIETARY_MODULE = true
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := mtk-ril
-LOCAL_SRC_FILES := lib/mtk-ril.so
-LOCAL_PROPRIETARY_MODULE = true
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := librilmtk
-LOCAL_SRC_FILES := lib/librilmtk.so
+LOCAL_MODULE := libcam1client
+LOCAL_SRC_FILES := lib/libcam1client.so
 LOCAL_PROPRIETARY_MODULE = true
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
